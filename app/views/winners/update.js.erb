@@ -1,0 +1,2 @@
+$('tr#winner_<%= @winner.id %>').replaceWith("<%= escape_javascript(render @winner) %>")
+$.lazybox.close()

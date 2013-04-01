@@ -1,0 +1,13 @@
+<%- model_class = Result -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='result'>
+  <p><%= @result.id %></p>
+  <p><%= @result.answer %></p>
+  <p><%= @result.question %></p>
+  <p><%= @result.team %></p>
+  <p><%= @result.ok %></p>
+
+</div>

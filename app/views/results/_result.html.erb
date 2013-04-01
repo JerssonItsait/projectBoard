@@ -1,0 +1,16 @@
+<tr id=<%= "result_#{result.id}" %>>
+  <td><%= link_to result.id, edit_result_path(result), :remote => true %></td>
+  <td><%= result.id %></td>
+  <td><%= result.answer %></td>
+  <td><%= result.question %></td>
+  <td><%= result.team %></td>
+  <td><%= result.ok %></td>
+  <td>
+    <%= link_to 'Mostrar', result, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_result_path(result), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', result, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

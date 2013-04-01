@@ -1,0 +1,11 @@
+<%- model_class = Winner -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='winner'>
+  <p><%= @winner.team %></p>
+  <p><%= @winner.member %></p>
+  <p><%= @winner.score %></p>
+  <p><%= @winner.date %></p>
+</div>

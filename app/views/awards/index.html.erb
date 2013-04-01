@@ -1,0 +1,22 @@
+<%- model_class = Award -%>
+<div class="page-header">
+  <h1>Premios</h1>
+</div>
+<table class="table table-hover table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>Orden</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @awards %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Premio', new_award_path, :remote => true, :class => 'btn btn-success' %></td>
+    </tr>
+  </tfoot>
+</table>

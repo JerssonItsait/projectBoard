@@ -1,0 +1,16 @@
+<tr id=<%= "question_#{question.id}" %>>
+  <td><%= link_to question.id, edit_question_path(question), :remote => true %></td>
+  <td><%= question.id %></td>
+  <td><%= question.description %></td>
+  <td><%= question.score %></td>
+  <td><%= question.letter %></td>
+  <td><%= question.category %></td>
+  <td>
+    <%= link_to 'Mostrar', question, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_question_path(question), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', question, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

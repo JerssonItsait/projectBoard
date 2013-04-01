@@ -1,0 +1,15 @@
+<%= simple_form_for(@winner, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  <%= display_base_errors @winner %>
+
+  <%= f.input :team, :label => "Equipo",  :required => true %>
+  <%= f.input :member, :label => "Integrante",  :required => true %>
+  <%= f.input :score, :label => "Puntaje",  :required => true %>
+  <%= f.input :date, :label => "Fecha",  :required => true %>
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', winners_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<tr id=<%= "winner_#{winner.id}" %>>
+  <td><%= link_to winner.id, edit_winner_path(winner), :remote => true %></td>
+  <td><%= winner.team %></td>
+  <td><%= winner.member%></td>
+  <td><%= winner.score%></td>
+  <td><%= winner.date%></td>
+  <td>
+    <%= link_to 'Mostrar', winner, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_winner_path(winner), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', winner, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

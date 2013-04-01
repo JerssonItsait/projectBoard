@@ -1,0 +1,21 @@
+<%- model_class = Rol -%>
+<div class="page-header">
+  <h1>Perfiles</h1>
+</div>
+<table class="table table-hover table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Nombre</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @rols %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Perfil', new_rol_path, :remote => true, :class => 'btn btn-success' %></td>
+    </tr>
+  </tfoot>
+</table>

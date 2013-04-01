@@ -1,0 +1,15 @@
+<%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+
+<%= f.error_notification %>
+<%= display_base_errors @user %>
+
+<%= f.association :rol, :label => "Rol", :required => true %>
+<%= f.input :name, :label => 'Escribe tu nombre o Alias' %>
+<%= f.input :email, :placeholder => 'user@domain.com' %>
+<%= f.input :password, :hint => false, :error_html => { :id => 'password_error'} %>
+<div class="form-actions">
+
+<%= f.submit "guardar", :class => 'btn btn-primary' %>
+<%= link_to 'Atras', users_path, :class => 'btn btn-small' %>
+</div>
+<% end %>

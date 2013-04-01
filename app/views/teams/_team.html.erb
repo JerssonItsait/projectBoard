@@ -1,0 +1,14 @@
+<tr id=<%= "team_#{team.id}" %>>
+  <th></th>
+  <td><%= link_to team.id, edit_team_path(team), :remote => true %></td>
+  <td><%= team.name %></td>
+  <td>
+    <%= link_to 'Mostrar', team, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_team_path(team), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', team, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+  <td><%= link_to 'Members', team_members_path(team)%></td>
+</tr>

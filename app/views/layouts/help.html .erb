@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tablero Millonario</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div class="navbar">
+    <div class="navbar-inner">
+    <a class="brand" href="#">EL TABLERO MILLONARIO </a>
+    <%= image_tag('logo4.jpeg', :alt => '', :class => "img-circle"  ) %>
+    <ul class="nav">
+    </ul>
+    </div>
+    </div>
+    <div class="span6 offset3">
+     <div class="hero-unit">
+    <h1>Como Podemos Ayudarte?</h1>
+    <p>En este divertido juego podras hacer tu equipo hasta de 3 integrantes,</p>
+    <p>escoge el tema del que quieres que te pregunten,</p>
+    <p>y ¡gana! con tu equipo fabulosos premios.</p>
+    <p>
+    <a class="btn btn-primary btn-large">
+    Leer Instrucciones
+    </a>
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="span12">
+        <div class="navbar">
+    <div class="navbar-inner">
+    <a class="brand" href="#"></a>
+    <ul class="nav">
+    <li><a href="#">Sobre nosotros</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Terminos</a></li>
+    <li><a href="#">Privacidad</a></li>
+    <li><a href="#">Publicidad</a></li>
+    <li><a href="#">Empleos</a></li>
+    </ul>
+    <p></p>
+    <p>Todos los Derechos Reservados 2013</p>
+    </div>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

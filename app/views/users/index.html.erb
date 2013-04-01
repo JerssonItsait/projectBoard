@@ -1,0 +1,24 @@
+<%- model_class = User -%>
+<div class="page-header">
+  <h1>Usuarios</h1>
+</div>
+<table class="table table-hover table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Perfil</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Contraseña</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @users %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Usuario', new_user_path, :remote => true, :class => 'btn btn-success' %></td>
+    </tr>
+  </tfoot>
+</table>

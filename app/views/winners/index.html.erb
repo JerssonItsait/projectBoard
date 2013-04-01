@@ -1,0 +1,24 @@
+<%- model_class = Winner -%>
+<div class="page-header">
+  <h1>Ganadores</h1>
+</div>
+<table class="table table-hover table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Equipo</th>
+      <th>Integrante</th>
+      <th>Puntaje</th>
+      <th>Fecha</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @winners %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Ganador', new_winner_path, :remote => true, :class => 'btn btn-success' %></td>
+    </tr>
+  </tfoot>
+</table>

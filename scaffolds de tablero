@@ -1,0 +1,28 @@
+scaffolds del proyecto tablero: (con bootstrap y simple_form)
+
+tablas padres primero:
+1) rails generate scaffold team name:string score:integer --skip-stylesheets
+
+2) rails generate scaffold winner nameteam:string namemember:string score:integer dategame:date --skip-stylesheets
+
+3) rails generate scaffold award name:string order:string --skip-stylesheets
+
+4) rails generate scaffold rol name:string --skip-stylesheets
+
+5) rails generate scaffold category name:string --skip-stylesheets
+
+
+tablas hijas de las padres anteriores:
+
+6) rails generate scaffold member name:string team:references --skip-stylesheets
+
+7) rails generate scaffold question description:string score:integer letter:string category:references --skip-stylesheets
+
+8) rails generate scaffold answer answer:string letter:string question:references --skip-stylesheets
+
+9) rails generate scaffold result answer:references question:references team:references ok:boolean --skip-stylesheets
+
+10) rails generate scaffold user rol:references name:string email:string password:string --skip-stylesheets
+
+
+
